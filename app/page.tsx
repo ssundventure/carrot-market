@@ -1,101 +1,108 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="flex justify-center items-center w-full h-screen p-14 bg-orange-500">
+      <div className="bg-white w-full h-full max-w-96 p-5 rounded-3xl">
+        <div className="flex place-items-end gap-1 text-sm pt-10">
+          March 2021
+          <svg
+            className="size-3 text-gray-400"
+            data-slot="icon"
+            fill="none"
+            stroke-width="1.5"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m19.5 8.25-7.5 7.5-7.5-7.5"
+            ></path>
+          </svg>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="bg-gray-400 h-px mt-2" />
+        <div className="text-center font-medium pt-7">
+          <p>Hello, Bruno! </p>
+          <p>Your medicines for today</p>
+        </div>
+        <div className="pt-8 flex gap-4 justify-center items-center text-center">
+          <div className="hover:bg-sky-400 rounded-2xl p-2 transition-colors">
+            <div className="text-2xl font-semibold">16</div>{" "}
+            <div className="pt-2 text-xs">Mon</div>
+          </div>
+          <div className="hover:bg-sky-400 rounded-2xl p-2 transition-colors">
+            <div className="text-2xl font-semibold">17</div>{" "}
+            <div className="pt-2 text-xs">Tue</div>
+          </div>
+          <div className="hover:bg-sky-400 rounded-2xl p-2 transition-colors">
+            <div className="text-2xl font-semibold">18</div>{" "}
+            <div className="pt-2 text-xs">Wed</div>
+          </div>
+          <div className="hover:bg-sky-400 rounded-2xl p-2 transition-colors">
+            <div className="text-2xl font-semibold">19</div>{" "}
+            <div className="pt-2 text-xs">Thu</div>
+          </div>
+          <div className="hover:bg-sky-400 rounded-2xl p-2 transition-colors">
+            <div className="text-2xl font-semibold">20</div>{" "}
+            <div className="pt-2 text-xs">Fri</div>
+          </div>
+          <div className="hover:bg-sky-400 rounded-2xl p-2 transition-colors">
+            <div className="text-2xl font-semibold">21</div>{" "}
+            <div className="pt-2 text-xs">Sat</div>
+          </div>
+        </div>
+        <div className="pt-28" />
+
+        <div className="flex-col justify-center items-center space-y-3 relative">
+          <div className="w-full h-48 bg-yellow-300 rounded-xl p-4 relative group">
+            <div className="text-2xl font-semibold">Nora - BE</div>
+            <div className="text-xs font-medium">Norenthindrone - 0.35mg</div>
+            <div className="absolute top-40 text-sm ">7h30AM</div>
+            <div className="h-48 bg-sky-400 rounded-xl p-4 absolute left-72 top-0 z-10 flex items-center invisible group-hover:visible transition-all">
+              <svg
+                className="size-6 z-20"
+                data-slot="icon"
+                fill="none"
+                stroke-width="1.5"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 12.75 6 6 9-13.5"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div className="w-full h-48 bg-green-300 rounded-xl p-4 relative group">
+            <div className="text-2xl font-semibold">Feosol</div>
+            <div className="text-xs font-medium">Ferrous Sulfate - 600mg</div>
+            <div className="absolute top-40 text-sm ">7h30AM</div>
+            <div className="h-48 bg-sky-400 rounded-xl p-4 absolute left-72 top-0 z-10 flex items-center invisible group-hover:visible transition-all">
+              <svg
+                className="size-6 z-20"
+                data-slot="icon"
+                fill="none"
+                stroke-width="1.5"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 12.75 6 6 9-13.5"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }
