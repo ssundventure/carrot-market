@@ -1,6 +1,5 @@
-import FormInput from "../components/form-input";
-import FormButton from "../components/form-btn";
-import SocialLogin from "../components/social-login";
+import FormInput from "../../components/form-input";
+import FormButton from "../../components/form-btn";
 
 export default function SMSLogin() {
   return (
@@ -24,7 +23,6 @@ export default function SMSLogin() {
         />
         <FormButton text="Verify" />
       </form>
-      <SocialLogin />
     </div>
   );
 }

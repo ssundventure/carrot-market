@@ -1,14 +1,13 @@
-"use client";
+"use client"
 
-import FormInput from "../components/form-input";
-import FormButton from "../components/form-btn";
-import SocialLogin from "../components/social-login";
+import FormInput from "../../components/form-input";
+import FormButton from "../../components/form-btn";
+import SocialLogin from "../../components/social-login";
 import { useFormState } from "react-dom";
 import { handleForm } from "./action";
 
 export default function Login() {
-  //useFormState(,초기값)
-  const [state, action] = useFormState(handleForm, { patato: 1 } as unknown);
+  const [state, action] = useFormState(handleForm, null);
 
   return (
     <div className="flex flex-col gap-10 py-8 px-6">
@@ -23,6 +22,7 @@ export default function Login() {
           type="password"
           placeholder="Password"
           required
+          errors={state?.errors ?? []}
         />
         <FormButton text="Log in" />
       </form>
