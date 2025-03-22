@@ -22,7 +22,6 @@ export default function Login() {
           type="password"
           placeholder="Password"
           required
-          errors={state?.errors ?? []}
         />
         <FormButton text="Log in" />
       </form>

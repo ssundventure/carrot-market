@@ -2,7 +2,7 @@ interface FormInputProps {
   name: string;
   type: string;
   placeholder: string;
-  required: boolean;
+  required?: boolean;
   errors?: string[];
 }
 
@@ -10,7 +10,7 @@ export default function FormInput({
   name,
   type,
   placeholder,
-  required,
+  required=false,
   errors = [],
 }: FormInputProps) {
   return (
