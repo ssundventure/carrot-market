@@ -33,8 +33,6 @@ const formSchema = z
       .min(10, "ConfirmPassword must contain at least 10 characters"),
   })
   .superRefine(({ password, confirm_password }, ctx) => {
-    console.log("✅ superRefine 실행됨", { password, confirm_password });
-
     if (password !== confirm_password) {
       ctx.addIssue({
         code: "custom",
@@ -45,7 +43,7 @@ const formSchema = z
   });
 
 export async function createAccount(prevState: unknown, formData: FormData) {
-  console.log("🚀 Received form data:", formData);
+  //console.log("🚀 Received form data:", formData);
 
   const parsedData = formSchema.safeParse({
     username: formData.get("username"),
