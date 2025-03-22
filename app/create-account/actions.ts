@@ -1,10 +1,7 @@
 "use server";
 
+import { PASSWORD_MIN_LENGTH, PASSWORD_MIN_LENGTH_ERROR_MSG, PASSWORD_REGEX, PASSWORD_REGEX_ERROR_MSG } from "@/lib/constants";
 import { z } from "zod";
-
-const passwordRegex = new RegExp(
-  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*?[#?!@$%^&*-]).+$/
-);
 
 const formSchema = z
   .object({
@@ -22,15 +19,15 @@ const formSchema = z
     email: z.string().email(),
     password: z
       .string()
-      .min(10, "Password must contain at least 10 characters")
+      .min(PASSWORD_MIN_LENGTH, PASSWORD_MIN_LENGTH_ERROR_MSG)
       .regex(
-        passwordRegex,
-        "Passwords must contain at least one UPPERCASE, lowercase, number and special characters #?!@$%^&*-"
+        PASSWORD_REGEX,
+        PASSWORD_REGEX_ERROR_MSG
       )
       .refine((password) => !password.includes("1234"), "No 1234 allowed"),
     confirm_password: z
       .string()
-      .min(10, "ConfirmPassword must contain at least 10 characters"),
+      .min(PASSWORD_MIN_LENGTH, PASSWORD_MIN_LENGTH_ERROR_MSG)
   })
   .superRefine(({ password, confirm_password }, ctx) => {
     if (password !== confirm_password) {
